@@ -1,10 +1,15 @@
 import pandas as pd
 import numpy as np
 
-import tensorflow.keras
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.models import load_model
+import tensorflow
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Dropout
+from keras.optimizers import Adam
+from keras.preprocessing.text import Tokenizer
+# from tf.keras.preprocessing.sequence import pad_sequences
+from keras.utils import pad_sequences
+from keras.models import load_model
+
 
 
 train_data = pd.read_csv("./static/assets/data_files/tweet_emotions.csv")   
